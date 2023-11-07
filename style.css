@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+.page{
+    width: 100vw;
+    height: 100vh;
+    background-color: hsl(226, 43%, 10%);
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    height: 70%;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "profile work play study"
+                         "profile excercise social self-care";
+    grid-gap: 15px;
+}
+
+.profile{
+    grid-area: profile;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+.orange{
+    grid-area: work;
+    background-color: hsl(15, 100%, 70%);
+    border-radius: 15px;
+}
+.sky-blue{
+    grid-area: play;
+    background-color: hsl(195, 74%, 62%);
+    border-radius: 15px;
+}
+.red{
+    grid-area: study;
+    background-color: hsl(348, 100%, 68%);
+    border-radius: 15px;
+}
+.green{
+    grid-area: excercise;
+    background-color: hsl(145, 58%, 55%);
+    border-radius: 15px;
+}
+.voilet{
+    grid-area: social;
+    background-color: hsl(264, 64%, 52%);
+    border-radius: 15px;
+}
+.yellow{
+    grid-area: self-care;
+    background-color: hsl(43, 84%, 65%);
+    border-radius: 15px;
+}
+
+.clr img{
+    margin-left: 65%;
+}
+
+.clr{
+    display: flex;
+    flex-direction: column;
+}
+
+.clr div{
+    width: 100%;
+    height: 72%;
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+}
+
+.p-blue img{
+    border: 3px solid white;
+    border-radius: 100%;
+}
+
+.p-blue{
+    width: 100%;
+    height: 70%;
+    border-radius: 15px;
+    background-color: hsl(246, 80%, 60%);
+    padding: 20px; 
+    color: white;
+}
+
+.p-blue .small-text{
+    font-size: 0.7em;
+    color: hsl(236, 100%, 87%);
+    margin-top: 35px;
+}
+
+.p-blue .big-text{
+    font-size: 2em;
+}
+
+.p-blue .big-text span{
+    display: block;
+}
+
+.period{
+    padding: 20px;
+}
+
+.period p{
+    color: hsl(235, 45%, 61%);
+    margin-top: 10px;
+    width: max-content; 
+    cursor: pointer;
+}
+
+.period p:hover{
+    color: white;
+}
+
+.title{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-size: 0.8em; 
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.time{
+    color: white;
+    font-size: 2em;
+    width: 80%;
+    margin: auto;
+}
+
+.lst-week{
+    font-size: 0.75em;
+    color: hsl(236, 100%, 87%);
+    width: 80%;
+    margin: auto;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.dots{
+    display: inline-block;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px){
+    .page{
+        height: auto;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+    }
+
+    .period{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+
+    .title{
+        margin-bottom: 15px;
+    }
+
+    .p-blue{
+        height: 60%;
+        display: flex;
+    }
+
+    .p-blue div{
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-top: -30px;
+    }
+
+    .p-blue img{
+        width: 55px;
+        height: 55px;
+    }
+
+    .p-blue .big-text{
+        font-size: 1.5em;
+    }
+
+    .p-blue .big-text span{
+        display: inline;
+    }
+    
+    .title + div{
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+    }
+}
